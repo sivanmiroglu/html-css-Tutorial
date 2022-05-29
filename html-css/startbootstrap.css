@@ -35,18 +35,13 @@ ul {
 
 ul li a{
     text-decoration: none;
-	color: white;
+	color: rgb(165, 165, 165);
     transition: .5s;
 }
 
  ul li a:hover{
-	color: gray;
+	color: white;
 }
-
-
-
-
-
 
 .headerRight{
     width: 80%;
@@ -58,7 +53,29 @@ ul li a{
     padding-bottom: 10px;
    
 }
-h1{
-width:762px;
-    height: 73px;
+
+
+
+.social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;;
+    width: 50px;
+    background-color: #495057;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .social-icons .social-icon:last-child {
+    margin-right: 0;
+  }
+  .social-icons .social-icon:hover {
+    background-color: #bd5d38;
+  }
+
+.text-right{
+  color:#bd5d38;
 }
