@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <input type="text" id="data">
+        <input type="text2" id="data2">
+    
+    <button id="Btn" onclick="calc()">Büyült</button>
+</body>
+<!-- Ekrana iki input ve bir buton koy. Butona tıkladığında iki inputtan aldığı değerleri birleştirip 
+ BÜYÜTEREK console a yazsın. Örneğin Çağatay ve Yıldız girdi. "ÇAĞATAYYILDIZ" yazacak. !-->
+ <script>
+     function calc(){
+
+         var adsoyad=document.getElementById('data').value
+          var name=document.getElementById('data2').value
+         console.log(adsoyad.toupperCase()+ name.toupperCase())
+        
+     }
+ </script>
+</html>

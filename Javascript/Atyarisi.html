@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Atyarisi.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="kapsayici">
+        <div id="bitis"></div>
+        <img id="atbir" src="atresmi.png">
+        <hr/>
+        <img id="atiki" src="Atresmi2.png">
+        <hr/>
+        <img id="atuc" src="Atresmi3.png">
+        <hr/>
+    </div>
+    <br><br>
+     <button id="deneme" onclick="Baslat()"> Yarışı Başlat </button>
+    
+</body>
+<script>
+function Baslat(){
+    var randomat1=0;
+    var randomat2=0;
+    var randomat3 = 0;
+
+    setInterval(() => {
+            randomat1 += Math.floor(Math.random() * 100);
+            randomat2 += Math.floor(Math.random() * 100);
+            randomat3 += Math.floor(Math.random() * 100);
+
+            document.getElementById('atbir').style.marginLeft = randomat1 + "px";
+            document.getElementById('atiki').style.marginLeft = randomat2 + "px";
+            document.getElementById('atuc').style.marginLeft = randomat3 + "px";
+        }, 1000);
+}
+
+
+</script>
+</html>

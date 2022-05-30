@@ -1,0 +1,28 @@
+div#kapsayici{
+    margin-right: 75px;
+    margin-top: 25px;
+    background-color: gray;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    transition: all 2s;
+}
+
+div#bitis{
+    width: 10px;
+    height: 350px;
+     position: relative; 
+    float: right;
+    background-color: red;
+    margin-right: 10px;
+}
+
+button{
+    cursor: pointer;
+    float:right;
+    width: 100px;
+    height: 75px;
+    font-size: 20px;
+}
