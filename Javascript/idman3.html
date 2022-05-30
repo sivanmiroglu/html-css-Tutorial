@@ -7,20 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    
-        <input type="text" id="data">
-        <input type="text2" id="data2">
-    
-    <button id="Btn" onclick="calc()">Büyült</button>
+    <div>
+        <label>Name: </label>
+        <input type="text" id="name">
+      
+    </div>
+       
+    <div>
+        <label>Surname: </label>
+        <input type="text" id="surname">
+    </div>
+    <div>
+        <button onclick="calc()" id="btn">Calc</button>
+        </div>
 </body>
 <!-- Ekrana iki input ve bir buton koy. Butona tıkladığında iki inputtan aldığı değerleri birleştirip 
  BÜYÜTEREK console a yazsın. Örneğin Çağatay ve Yıldız girdi. "ÇAĞATAYYILDIZ" yazacak. !-->
  <script>
      function calc(){
-
-         var adsoyad=document.getElementById('data').value
-          var name=document.getElementById('data2').value
-         console.log(adsoyad.toupperCase()+ name.toupperCase())
+       
+        var nameValue=document.getElementById("name").value;
+        var surnameValue=document.getElementById("surname").value;
+    console.log(nameValue.toUpperCase()+surnameValue.toUpperCase());
         
      }
  </script>

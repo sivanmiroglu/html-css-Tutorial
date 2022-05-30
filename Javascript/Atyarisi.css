@@ -5,6 +5,8 @@ div#kapsayici{
 }
 
 img{
+    position: relative;
+    left:5px;
     width: 100px;
     height: 100px;
     transition: all 2s;

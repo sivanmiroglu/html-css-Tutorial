@@ -35,9 +35,16 @@ function Baslat(){
             document.getElementById('atbir').style.marginLeft = randomat1 + "px";
             document.getElementById('atiki').style.marginLeft = randomat2 + "px";
             document.getElementById('atuc').style.marginLeft = randomat3 + "px";
+              
+            if(randomat1>1200 || randomat2 > 1200 || randomat3 > 1200){
+                myStopFunction();
+            }
+
         }, 1000);
+
+        function myStopFunction(){
+            clearInterval(time);
+        }
 }
-
-
 </script>
 </html>
