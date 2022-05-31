@@ -5,46 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Atyarisi.css">
-    <title>Document</title>
+    <title>Horse Race</title>
 </head>
-<body>
+<body style="background-color: rgb(87, 160, 87)">
     <div id="kapsayici">
         <div id="bitis"></div>
-        <img id="atbir" src="atresmi.png">
-        <hr/>
-        <img id="atiki" src="Atresmi2.png">
-        <hr/>
-        <img id="atuc" src="Atresmi3.png">
-        <hr/>
+        <div> 
+            <img id="atbir" src="atresmi.png">
+        </div>
+       
+        <div>
+            <img id="atiki" src="Atresmi2.png">
+        </div>
+       
+     
+        <div>
+            <img id="atuc" src="Atresmi3.png">
+        </div>
+         
+        <hr id="finishline">
+      
     </div>
-    <br><br>
-     <button id="deneme" onclick="Baslat()"> Yarışı Başlat </button>
+     <button  onclick="Baslat()"> Yarışı Başlat </button>
     
 </body>
 <script>
-function Baslat(){
-    var randomat1=0;
-    var randomat2=0;
-    var randomat3 = 0;
 
-    setInterval(() => {
-            randomat1 += Math.floor(Math.random() * 100);
-            randomat2 += Math.floor(Math.random() * 100);
-            randomat3 += Math.floor(Math.random() * 100);
+    var hrleft= screen.width * 0.8;
 
-            document.getElementById('atbir').style.marginLeft = randomat1 + "px";
-            document.getElementById('atiki').style.marginLeft = randomat2 + "px";
-            document.getElementById('atuc').style.marginLeft = randomat3 + "px";
-              
-            if(randomat1>1200 || randomat2 > 1200 || randomat3 > 1200){
-                myStopFunction();
+    document.getElementById('finishline').style.left=hrleft + "px";
+
+    var imgleft=10;
+
+      document.getElementById('atreasmi').style.left=imgLeft +"px";
+      document.getElementById('Atresmi2').style.left=imgLeft +"px";
+      document.getEelementById('Atresmi3').style.left=imgLeft +"px";
+
+      var atresmileft=10;
+      var Atresmi2left=10;
+      var Atresmi3left=10;
+
+      function Baslat(){
+
+          var audio =new audio('horse.rage');
+          audio.play();
+
+          var interval =setInterval(() => {
+           
+            if((atresmileft + 200)>hrleft || (Atresmi2left+ 200)>hrleft ||(Atresmi3left+ 200)>hrleft)
+            {
+                if (atresmileft > Atresmi2left && atresmileft > Atresmi3left) {
+                    alert("At  kazandı..")
+                }
+                else if (Atresmi2left > atresmileft && Atresmi2left > Atresmi3left) {
+                    alert("At 2 kazandı..")
+                }
+                else {
+                    alert("At 3 kazandı..")
+                }
+
+
+                stopHorses();
             }
 
-        }, 1000);
+            var random1 = Math.floor(Math.random() * 50);
+            var random2 = Math.floor(Math.random() * 50);
+            var random3 = Math.floor(Math.random() * 50);
 
-        function myStopFunction(){
-            clearInterval(time);
+            atresmileft += random1;
+            Atresmi2left += random2;
+            Atresmi3left += random3;
+
+            document.getElementById('atresmi').style.left = atresmileft + "px";
+            document.getElementById('Atresmi2').style.left = Atresmi2left + "px";
+            document.getElementById('Atresmi3').style.left = Atresmi3left + "px";
+
+        }, 200);
+            }
+
+            function stopHorses() {
+            clearInterval(interval)
         }
-}
+   
+      
+
 </script>
 </html>
