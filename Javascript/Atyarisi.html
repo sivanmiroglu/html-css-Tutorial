@@ -37,18 +37,17 @@
 
     var imgleft=10;
 
-      document.getElementById('atreasmi').style.left=imgLeft +"px";
-      document.getElementById('Atresmi2').style.left=imgLeft +"px";
-      document.getEelementById('Atresmi3').style.left=imgLeft +"px";
+    
 
       var atresmileft=10;
       var Atresmi2left=10;
       var Atresmi3left=10;
 
+
+
       function Baslat(){
 
-          var audio =new audio('horse.rage');
-          audio.play();
+      
 
           var interval =setInterval(() => {
            
@@ -64,8 +63,7 @@
                     alert("At 3 kazandı..")
                 }
 
-
-                stopHorses();
+                stopHorses();     
             }
 
             var random1 = Math.floor(Math.random() * 50);
@@ -76,9 +74,9 @@
             Atresmi2left += random2;
             Atresmi3left += random3;
 
-            document.getElementById('atresmi').style.left = atresmileft + "px";
-            document.getElementById('Atresmi2').style.left = Atresmi2left + "px";
-            document.getElementById('Atresmi3').style.left = Atresmi3left + "px";
+        document.getElementById('atbir').style.left=atresmileft +"px";
+      document.getElementById('atiki').style.left= Atresmi2left +"px";
+      document.getElementById('atuc').style.left=Atresmi3left +"px";
 
         }, 200);
             }
